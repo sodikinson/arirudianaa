@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ari Rudiana - instagram - github - twitter</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="manifest" href="manifest.json" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="con-user">
+                <div class="avatar">
+                    <img src="/avatar.jpg" alt="profile" />
+                </div>
+                <div class="title">
+                    <h1>Ari Rudiana</h1>
+                    <p>
+                        Full Stack developer <br />
+                        Currently
+                        <a target="_blank" href="https://www.visiontale.id/"
+                            >@VisionTale</a
+                        >
+                        and Open for freelance projects
+                    </p>
+                </div>
+            </div>
+            <div class="con-menu">
+                <button
+                    onclick="handleClick(event, 'con-links')"
+                    class="active"
+                >
+                    Links
+                </button>
+                <button onclick="handleClick(event, 'con-posts')">
+                    Portfolio
+                </button>
+            </div>
+            <div class="con-contents">
+                <div class="con-links">
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/arirudiana/"
+                    >
+                        <i class="bx bxl-linkedin-square"></i>
+                        <span> Linkedin </span>
+                    </a>
+
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/arirudianaa/"
+                    >
+                        <i class="bx bxl-instagram-alt"></i>
+                        <span> Instagram </span>
+                    </a>
+                    <a target="_blank" href="https://codepen.io/ari-rudiana">
+                        <i class="bx bxl-codepen"></i>
+                        <span> Codepen </span>
+                    </a>
+
+                    <a
+                        target="_blank"
+                        href="https://github.com/luisDanielRoviraContreras"
+                    >
+                        <i class="bx bxl-github"></i>
+                        <span> Github </span>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/arirudianaa">
+                        <i class="bx bxl-twitter"></i>
+                        <span> Twitter </span>
+                    </a>
+                    <a target="_blank" href="https://dribbble.com/arirudiana66">
+                        <i class="bx bxl-dribbble"></i>
+                        <span> Dribbble </span>
+                    </a>
+                    <a target="_blank" href="https://wa.link/7xtfm4">
+                        <i class="bx bxs-paper-plane bx-tada"></i>
+                        <span> WhatsApp </span>
+                    </a>
+                </div>
+
+                <div class="con-posts">
+                    <a
+                        class="post"
+                        target="_blank"
+                        href="https://www.instagram.com/tv/CKqNrkRnmrx/?utm_source=ig_web_copy_link"
+                    >
+                        <div class="con-file">
+                            <img src="property.jpg" alt="" />
+                        </div>
+
+                        <footer>
+                            <h3>
+                                <i class="bx bxl-instagram-alt"></i>
+                                Instagram
+                            </h3>
+                            <p>Property App, with Flutter UI</p>
+                        </footer>
+
+                        <div class="effect"></div>
+                    </a>
+
+                    <a
+                        class="post"
+                        target="_blank"
+                        href="https://selasclinic.com/"
+                    >
+                        <div class="con-file">
+                            <img src="selas.png" alt="" />
+                        </div>
+
+                        <footer>
+                            <h3>
+                                <i class="bx bxs-pointer bx-burst"></i>
+                                Website
+                            </h3>
+                            <p>Selas Clinic</p>
+                        </footer>
+
+                        <div class="effect"></div>
+                    </a>
+                    <a
+                        class="post"
+                        target="_blank"
+                        href="https://ari-rudiana.netlify.app/"
+                    >
+                        <div class="con-file">
+                            <img src="ari.png" alt="" />
+                        </div>
+
+                        <footer>
+                            <h3>
+                                <i class="bx bx-sun bx-spin"></i>
+                                Ari Rudiana
+                            </h3>
+                            <p>Software Developer</p>
+                        </footer>
+
+                        <div class="effect"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-navbar">
+            <div class="con-effect">
+                <div class="effect"></div>
+            </div>
+            <button class="active">
+                <i class="bx bx-home"></i>
+            </button>
+            <button>
+                <i class="bx bx-chat"></i>
+            </button>
+            <button onclick="handleClickPlus(event)" class="float">
+                <i class="bx bxs-yin-yang bx-spin"></i>
+            </button>
+            <button>
+                <i class="bx bx-shopping-bag"></i>
+            </button>
+            <button>
+                <i class="bx bx-user"></i>
+            </button>
+        </div>
+        <div class="container">
+            <img src="/pc.png" alt="" />
+            <p>Any project ideas ?</p>
+            <button>Let's Talk</button>
+        </div>
+    </body>
+    <script>
+        const user = document.querySelector(".con-user");
+        const menu = document.querySelector(".con-menu");
+        const contents = document.querySelector(".con-contents");
+        const links = document.querySelector(".con-contents .con-links");
+        const posts = document.querySelector(".con-contents .con-posts");
+        window.addEventListener("load", function (event) {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+            setTimeout(function () {
+                window.scrollTo(0, 1);
+            }, 0);
+            const h =
+                window.innerHeight - menu.clientHeight - user.clientHeight;
+            contents.style.height = `${h}px`;
+            links.style.height = `${h}px`;
+            posts.style.height = `${h}px`;
+        });
+
+        function handleClick(evt, name) {
+            const items = document.querySelectorAll(".con-menu button");
+            const el = evt.target;
+            items.forEach((item) => {
+                item.classList.remove("active");
+            });
+            el.classList.add("active");
+            const elScroll = document.querySelector(`.${name}`);
+            contents.scrollTo(elScroll.offsetLeft, 0);
+        }
+
+        contents.addEventListener("scroll", (evt) => {
+            if (
+                evt.target.scrollLeft > window.innerWidth / 2 &&
+                evt.target.scrollLeft <
+                    window.innerWidth + window.innerWidth / 2
+            ) {
+                menu.querySelector("button:nth-child(1)").classList.remove(
+                    "active",
+                );
+                menu.querySelector("button:nth-child(2)").classList.add(
+                    "active",
+                );
+                menu.querySelector("button:nth-child(3)").classList.remove(
+                    "active",
+                );
+            } else if (evt.target.scrollLeft < window.innerWidth / 2) {
+                menu.querySelector("button:nth-child(1)").classList.add(
+                    "active",
+                );
+                menu.querySelector("button:nth-child(2)").classList.remove(
+                    "active",
+                );
+                menu.querySelector("button:nth-child(3)").classList.remove(
+                    "active",
+                );
+            } else if (
+                evt.target.scrollLeft >
+                window.innerWidth + window.innerWidth / 2
+            ) {
+                menu.querySelector("button:nth-child(2)").classList.remove(
+                    "active",
+                );
+                menu.querySelector("button:nth-child(3)").classList.add(
+                    "active",
+                );
+            }
+        });
+
+        // bottom navbar
+        const buttons = document.querySelectorAll(
+            ".bottom-navbar button:not(.float)",
+        );
+        const effect = document.querySelector(".effect");
+        const container = document.querySelector(".container");
+        let y = 0;
+        let moveY = 0;
+        let open = false;
+
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+        setTimeout(function () {
+            window.scrollTo(0, 1);
+        }, 0);
+
+        window.addEventListener("touchstart", (evt) => {
+            const area = window.innerHeight - evt.touches[0].clientY;
+            y = area;
+            console.log(y);
+        });
+
+        window.addEventListener("touchend", (evt) => {
+            y = 0;
+            console.log(moveY);
+            if (moveY > window.innerHeight / 4) {
+                anime({
+                    targets: ".container",
+                    translateY: `-${window.innerHeight / 2}px`,
+                    duration: 600,
+                });
+                open = true;
+            } else {
+                anime({
+                    targets: ".container",
+                    translateY: `0px`,
+                    duration: 600,
+                    easing: "easeOutExpo",
+                });
+                open = false;
+            }
+        });
+
+        window.addEventListener("touchmove", (evt) => {
+            moveY = window.innerHeight - y - evt.touches[0].clientY;
+            console.log(y);
+            if (!open) {
+                anime({
+                    targets: ".container",
+                    translateY: `${
+                        moveY <= window.innerHeight / 2
+                            ? moveY > 0
+                                ? -moveY
+                                : 0
+                            : -window.innerHeight / 2
+                    }px`,
+                    duration: 200,
+                });
+            } else if (open) {
+                moveY = moveY + window.innerHeight / 2;
+                anime({
+                    targets: ".container",
+                    translateY: `${
+                        moveY <= window.innerHeight / 2
+                            ? moveY > 0
+                                ? -moveY
+                                : 0
+                            : -window.innerHeight / 2
+                    }px`,
+                    duration: 200,
+                });
+            }
+        });
+
+        buttons.forEach((item) => {
+            item.addEventListener("click", (evt) => {
+                const x = evt.target.offsetLeft;
+                buttons.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+                evt.target.classList.add("active");
+                anime({
+                    targets: ".effect",
+                    left: `${x}px`,
+                    duration: 600,
+                });
+            });
+        });
+
+        function handleClickPlus(evt) {
+            anime({
+                targets: ".container",
+                translateY: `-${window.innerHeight / 2}px`,
+                duration: 600,
+            });
+            open = true;
+            y = window.innerHeight / 2;
+            moveY = moveY + window.innerHeight / 2;
+        }
+    </script>
+    <style>
+        body {
+            --primary: 25, 91, 255;
+            --color: 44, 62, 80;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            background: #f4f7f8;
+            height: calc(var(--vh, 1vh) * 100);
+            overflow: hidden;
+            color: rgb(var(--color));
+        }
+        * {
+            list-style: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .con-user {
+            padding-top: 10px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: #fff;
+            padding-bottom: 10px;
+            border-radius: 0px 0px 40px 0px;
+        }
+        .con-user .title {
+            text-align: center;
+            width: 100%;
+        }
+        .con-user .title h1 {
+            font-size: 1.1rem;
+            padding: 0px 0px;
+        }
+        .con-user .title p {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            padding: 6px 10px;
+        }
+        .con-user .title p a {
+            color: rgb(var(--text));
+        }
+        .avatar img {
+            width: 80px;
+            border-radius: 30px;
+        }
+        .con-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            max-width: 500px;
+            margin: auto;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.08);
+            border-radius: 0px 0px 30px 30px;
+        }
+        .con-menu button {
+            padding: 12px;
+            width: calc(50% - 4px);
+            border: 0px;
+            background: transparent;
+            font-weight: bold;
+            color: rgb(var(--text));
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            z-index: 2;
+        }
+        .con-menu button.active {
+            background: #fff;
+            box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.06);
+            /* color: rgb(var(--primary)); */
+        }
+        .con-contents {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            flex: 1;
+            height: 100%;
+            position: relative;
+            max-width: 500px;
+        }
+        .con-posts {
+            min-width: 100%;
+            scroll-snap-align: center;
+            overflow: auto;
+            padding-bottom: 30px;
+            max-width: 500px;
+        }
+        .con-posts .post {
+            width: calc(100% - 40px);
+            overflow: hidden;
+            box-sizing: border-box;
+            display: block;
+            margin: 20px;
+            position: relative;
+            color: rgb(var(--text));
+            border-radius: 30px;
+            box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .con-file {
+            width: 100%;
+            padding-bottom: 100%;
+            height: 0;
+        }
+        .con-posts .post img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translate(0, -50%);
+        }
+        .con-posts .post video {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translate(0, -50%);
+        }
+        .con-posts .post footer {
+            position: absolute;
+            bottom: 0px;
+            z-index: 10;
+            padding: 10px 20px;
+        }
+        .con-posts .post footer h3 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .con-posts .post footer h3 i {
+            margin-right: 5px;
+            font-size: 1.4rem;
+        }
+        .con-posts .post .effect {
+            position: absolute;
+            bottom: 0px;
+            height: 150px;
+            width: 100%;
+            background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 1) 30%,
+                rgba(0, 0, 0, 0.001) 100%
+            );
+        }
+        .con-links {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 15px 20px;
+            padding-top: 0px;
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            min-width: 100%;
+            scroll-snap-align: center;
+            flex: 1;
+            overflow: auto;
+            padding-top: 20px;
+        }
+        .con-links a {
+            display: block;
+            width: 100%;
+            padding: 18px 22px;
+            text-decoration: none;
+            font-size: 1rem;
+            /* color: #fff; */
+            color: rgb(var(--color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: rgb(var(--primary)); */
+            /* background: rgb(var(--color));; */
+            margin-bottom: 12px;
+            border-radius: 25px;
+            position: relative;
+            /* border: 2px solid rgb(var(--color)); */
+            background: #fff;
+            /* box-shadow: 0px 10px 30px 0px rgba(var(--primary), .15); */
+        }
+        .con-links a:after {
+            content: "";
+            left: 0px;
+            top: 0px;
+            width: 61px;
+            height: 61px;
+            background: rgb(var(--color));
+            position: absolute;
+            border-radius: 25px;
+        }
+        .con-links a:last-child {
+            margin-bottom: 40px;
+        }
+        .con-links a img {
+            max-width: 22px;
+            position: absolute;
+            left: 20px;
+            z-index: 10;
+        }
+        .con-links a svg {
+            width: 22px;
+            fill: #fff;
+            position: absolute;
+            left: 19px;
+            z-index: 10;
+        }
+        .con-links a i {
+            font-size: 1.6rem;
+            position: absolute;
+            left: 18px;
+            z-index: 10;
+            color: #fff;
+        }
+        .con-links a span {
+            text-align: center;
+        }
+        .con-links a span p {
+            font-size: 0.8rem;
+        }
+
+        /* // bottom navbar */
+        .container {
+            position: fixed;
+            top: calc(var(--vh, 1vh) * 100);
+            width: 100%;
+            height: calc(var(--vh, 1vh) * 50);
+            background: #fff;
+            border-radius: 30px 30px 0px 0px;
+            padding-top: 40px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container::after {
+            content: "";
+            left: 50%;
+            top: -14px;
+            width: 45px;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            transform: translate(-50%);
+            border-radius: 20px;
+        }
+        .container p {
+            width: 70%;
+            padding-top: 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+        .container img {
+            width: 75%;
+        }
+        .container button {
+            padding: 12px 30px;
+            background: rgb(232, 76, 79);
+            color: #fff;
+            border: 0px;
+            margin-top: 20px;
+            border-radius: 17px;
+        }
+        .container::before {
+            content: "";
+            left: 0px;
+            bottom: -150px;
+            width: 100%;
+            height: 150px;
+            background: #fff;
+            position: absolute;
+        }
+        .bottom-navbar {
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            background: #fff;
+            border-radius: 30px 30px 0px 0px;
+            padding: 10px 0px;
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+        }
+        .bottom-navbar button {
+            width: 60px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0px;
+            background: transparent;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+        .bottom-navbar button:active:not(.float) {
+            transform: scale(1.2);
+        }
+        .bottom-navbar button.float {
+            margin-top: -50px;
+            background: rgb(0, 24, 238);
+            color: #fff;
+            border-radius: 25px;
+            height: 60px;
+            box-shadow: 0px 10px 20px 0px rgba(232, 76, 79, 0.4);
+        }
+        .bottom-navbar button.active {
+            color: rgb(0, 4, 255);
+        }
+        .bottom-navbar button i {
+            font-size: 1.5rem;
+            pointer-events: none;
+        }
+        .con-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .effect {
+            background: rgba(100, 76, 232, 0.15);
+            width: 60px;
+            height: 50px;
+            position: absolute;
+            left: 13px;
+            border-radius: 18px;
+        }
+    </style>
+</html>

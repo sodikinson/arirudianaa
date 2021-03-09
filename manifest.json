@@ -1,0 +1,11 @@
+{
+    "name": "Links Ari Rudiana",
+    "short_name": "Ari Rudiana - instagram - github - twitter",
+    "description": "Links Ari Rudiana",
+    "theme_color": "#fff",
+    "background_color": "white",
+    "display": "standalone",
+    "Scope": "./",
+    "start_url": "index.html",
+    "splash_pages": null
+}
